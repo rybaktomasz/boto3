@@ -146,7 +146,7 @@ class BatchAction(ServiceAction):
 
             params.update(kwargs)
 
-            logger.info('Calling %s:%s with %r',
+            logger.debug('Calling %s:%s with %r',
                         service_name, operation_name, params)
 
             response = getattr(client, operation_name)(**params)
